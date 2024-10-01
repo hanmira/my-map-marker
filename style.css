@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@layer base {
+  * {
+    @apply m-0 p-0 font-[quicksand];
+  }
+
+  body {
+    @apply bg-white;
+  }
+
+  img {
+    @apply w-full h-full object-cover;
+  }
+
+  input {
+    @apply outline-none text-sm border border-gray-300 w-[20rem] px-3 py-2 rounded-xl text-black placeholder:text-gray-600;
+  }
+
+  .hide {
+    @apply hidden;
+  }
+
+  .restaurant-popup .leaflet-popup-content-wrapper {
+    border-left: 4px solid #fbb962 !important;
+  }
+
+  .coffee-popup .leaflet-popup-content-wrapper {
+    border-left: 4px solid #cffd7a !important;
+  }
+
+  .leaflet-popup-content {
+    font-weight: 800 !important;
+    text-align: center !important;
+  }
+
+  .header-section {
+    @apply px-8 py-5 flex justify-between;
+  }
+
+  .searchbar-wrapper {
+  }
+
+  .user-wrapper {
+    @apply flex gap-5 items-center;
+  }
+
+  .bookmark-icon {
+    @apply cursor-pointer text-black w-10 h-10 border border-gray-300 flex justify-center items-center rounded-lg;
+  }
+
+  .user-info {
+    @apply flex gap-3 justify-between items-center;
+  }
+
+  .user-img-wrapper {
+    @apply w-11 h-11 rounded-full overflow-hidden border border-white;
+  }
+
+  .user-name-wrapper {
+    @apply flex gap-1 justify-between items-center;
+  }
+
+  .user-name {
+    @apply text-sm font-semibold;
+  }
+
+  .map-n-form {
+    @apply grid grid-cols-3 px-8 pt-2 pb-5 gap-10;
+  }
+
+  #map {
+    @apply h-[500px] col-span-2 rounded-xl
+    /* filter: grayscale(100%); */;
+  }
+
+  .btn {
+    @apply px-5 py-3 border border-transparent bg-black text-white rounded-xl hover:text-black hover:border-black hover:bg-white;
+  }
+
+  .form-title {
+    @apply text-xl font-semibold mb-3 flex justify-between items-center cursor-pointer;
+  }
+
+  .btn-close-form {
+  }
+
+  .form-title span {
+    @apply text-gray-500;
+  }
+
+  #add-place-form {
+    @apply text-xs bg-slate-300 h-fit p-6 rounded-2xl bg-gradient-to-r from-[#E8EDFD] to-[#FAEEFF] hidden flex-col gap-3;
+  }
+
+  #add-place-form input[type="file"] {
+    @apply w-[calc(100%_-42px)] mt-2;
+  }
+
+  #add-place-form input {
+    @apply text-xs;
+  }
+
+  #add-place-form label {
+    @apply font-medium;
+  }
+
+  #add-place-form input {
+    @apply w-28 rounded-lg bg-slate-100 active:bg-white focus:bg-white;
+  }
+
+  #add-place-form select {
+    @apply border border-gray-200 p-2 rounded-lg bg-slate-100 active:bg-white focus:bg-white;
+  }
+
+  .form-type-cuisine,
+  .form-name-spend {
+    @apply flex gap-3 justify-between;
+  }
+
+  .form-cuisine {
+  }
+
+  .form-vibe {
+  }
+
+  .filter-places {
+    @apply flex justify-between text-gray-500 text-sm my-3;
+  }
+
+  .place-list-title {
+    @apply text-2xl font-semibold mt-5;
+  }
+
+  .place-list-item {
+    @apply flex gap-3 justify-between items-center text-sm py-2 border-b border-gray-300 first:border-t cursor-pointer select-none;
+  }
+
+  .place-img-wrapper.place-img-restaurant {
+    @apply bg-orange-100;
+  }
+
+  .place-img-wrapper.place-img-coffee {
+    @apply bg-lime-200;
+  }
+
+  .place-img-wrapper {
+    @apply w-12 h-12 p-2 rounded-xl;
+  }
+
+  .btn-view {
+    @apply p-2 bg-black;
+  }
+
+  .marker {
+    @apply flex flex-col p-3 select-none;
+  }
+
+  .marker-img-wrapper {
+    @apply w-[230px] h-40 overflow-hidden rounded-md relative;
+  }
+
+  .marker-tag {
+    @apply px-3 py-2 bg-white w-fit absolute top-0 left-0 font-bold m-2 rounded-md text-sm bg-gradient-to-tl;
+  }
+
+  .marker-expensive {
+    @apply from-[#ffb330] to-[#fffcce] text-black;
+  }
+
+  .marker-affordable {
+    @apply from-[#F7CAC9] to-[#91A8D0] text-white;
+  }
+
+  .marker-name {
+    @apply flex items-center justify-between gap-1 font-bold uppercase my-3 text-xl;
+  }
+
+  .marker-name ion-icon {
+    @apply text-lg p-2 border border-slate-300 rounded-md;
+  }
+
+  .marker-desc {
+    @apply flex flex-col gap-2;
+  }
+
+  .marker-desc li {
+    @apply flex gap-2 items-center text-sm w-[230px];
+  }
+}
