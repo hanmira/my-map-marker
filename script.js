@@ -274,64 +274,6 @@ class App {
     let imgSrc;
     let newPlace;
 
-    // this.inputImg.addEventListener("change", async (e) => {
-    //   e.preventDefault();
-    //   const file = e.target;
-    //   const imgFile = file.files[0];
-    //   // console.log(imgFile);
-    //   try {
-    //     const base64String = await this.toBase64(imgFile);
-    //     imgSrc = base64String; // Assign base64 string only if successful
-
-    //     if (typeValue === "Restaurant") {
-    //       const cuisineValue = document.getElementById("cuisine").value.trim();
-    //       newPlace = new Restaurant(
-    //         this.generateUniqueId(),
-    //         nameValue,
-    //         typeValue,
-    //         spendValue,
-    //         imgSrc,
-    //         cuisineValue,
-    //         this.latitude,
-    //         this.longitude
-    //       );
-    //     } else if (typeValue === "Coffee") {
-    //       const vibeValue = document.getElementById("vibe").value.trim();
-    //       newPlace = new CoffeeShop(
-    //         this.generateUniqueId(),
-    //         nameValue,
-    //         typeValue,
-    //         spendValue,
-    //         imgSrc,
-    //         vibeValue,
-    //         this.latitude,
-    //         this.longitude
-    //       );
-    //     }
-
-    //     if (
-    //       validNums(spendValue) &&
-    //       validStrings(typeValue, nameValue, imgSrc || "") // Check imgSrc if assigned
-    //     ) {
-    //       this.places.push(newPlace);
-    //       this.addNewMarker(newPlace);
-    //       this.addVisitedPlace(
-    //         newPlace.type,
-    //         newPlace.name,
-    //         newPlace.createVisitLog,
-    //         newPlace.id
-    //       );
-    //       this.clearForm();
-    //       this.hideForm();
-    //       this.starPlace();
-    //     } else {
-    //       alert("Input must be a positive number and not null!");
-    //     }
-    //   } catch (error) {
-    //     console.error("Error converting to base64:", error);
-    //   }
-    // });
-
     // check if type is res, add new res
     if (typeValue === "Restaurant") {
       const cuisineValue = document.getElementById("cuisine").value.trim();
