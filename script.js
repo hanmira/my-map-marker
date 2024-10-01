@@ -3,7 +3,7 @@ class Place {
     this.id = id;
     this.isStarred = false;
     this.name = name;
-    this.type = type; // Can be "restaurant", "cafe", etc.
+    this.type = type; 
     this.spend = spend;
     this.img = img;
     this.latitude = latitude;
@@ -51,7 +51,7 @@ class Restaurant extends Place {
     latitude,
     longitude
   ) {
-    super(id, isStarred, name, type, spend, img, latitude, longitude); // Call parent constructor with specific type
+    super(id, isStarred, name, type, spend, img, latitude, longitude); 
     this.cuisine = cuisine;
   }
 }
@@ -68,7 +68,7 @@ class CoffeeShop extends Place {
     latitude,
     longitude
   ) {
-    super(id, isStarred, name, type, spend, img, latitude, longitude); // Call parent constructor with specific type
+    super(id, isStarred, name, type, spend, img, latitude, longitude); 
     this.vibe = vibe;
   }
 }
@@ -177,7 +177,7 @@ class App {
     );
   }
 
-  // Initialize Leaflet map (assuming map container with ID "map" exists)
+  // Initialize Leaflet map 
   initMap() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -199,7 +199,7 @@ class App {
           '&copy; <a href="https://carto.com/attribution">CARTO</a> contributors',
       }
     ).addTo(this.map);
-    // this.initPlaceMarkers();
+    
     //when clicked on map, the form appear
     this.map.on("click", (e) => {
       this.latitude = e.latlng.lat;
@@ -331,7 +331,7 @@ class App {
           this.longitude
         );
         //add the new created obj to the places array
-        // this.places.push(newPlace);
+        
         this.setPlaces(newPlace);
         this.addNewMarker(newPlace);
         this.addVisitedPlace(
@@ -447,16 +447,12 @@ class App {
 
   moveToMap(e) {
     let btnView = e.target.closest(".btn-view");
-    // console.log(btnView);
     if (btnView) {
       let placeListItem = e.target.closest(".place-list-item");
-      // console.log(placeListItem);
-      // console.log(placeListItem.dataset.id);
       btnView.addEventListener("click", () => {
         const foundPlace = this.places.find(
           (place) => place.id === placeListItem.dataset.id
         );
-        // console.log(foundPlace);
 
         if (foundPlace) {
           const { latitude, longitude } = foundPlace;
@@ -484,7 +480,6 @@ class App {
         const foundPlaces = this.places.filter((place) =>
           place.name.toLowerCase().includes(searchTerm)
         );
-        // console.log(foundPlaces);
         if (foundPlaces.length > 0) {
           placeList.innerHTML = "";
           foundPlaces.forEach((place) => {
